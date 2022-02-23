@@ -1,0 +1,210 @@
+.company {
+  .banner__overlay {
+    top: 50%;
+    transform: translateY(-50%);
+    @include respond-to("medium") {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  @include respond-to("medium") {
+    .team-members {
+      margin-top: px2rem(0);
+    }
+    .vision {
+      margin-top: px2rem(81);
+    }
+    .ndb-vision {
+      &__card {
+        padding: 4rem 0rem;
+      }
+      .card-image {
+        object-position: right;
+      }
+    }
+    .technology__section1 {
+      margin-top: px2rem(41);
+    }
+  }
+  @include respond-to("small") {
+    .vision {
+      margin-top: px2rem(0);
+    }
+    .ndb-vision {
+      gap: 0;
+      &__card {
+        padding: 4rem 0rem;
+      }
+    }
+    .technology__section1 {
+      margin-top: px2rem(0);
+      padding-top: 0;
+    }
+    #team-members {
+      padding: 0;
+    }
+  }
+  @media screen and (min-width: 481px) and (max-width: 768px) {
+    .ndb-vision {
+      .gridContent {
+        width: 100%;
+      }
+      .card-image {
+        object-position: bottom;
+      }
+    }
+  }
+  .ndb-vision__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    padding: 0;
+    @include respond-to("small") {
+      padding: 0;
+    }
+    @media screen and (min-width: 481px) and (max-width: 768px) {
+      padding: 6rem 4rem;
+    }
+    @media screen and (min-width: 1025px) and (max-width: 1300px) {
+      .gridContent {
+        width: 100%;
+      }
+    }
+  }
+  .board {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    grid-auto-rows: minmax(200px, 290px);
+    gap: 3rem 1rem;
+    transition: all 0.5s;
+    @include respond-to("small") {
+      grid-template-columns: repeat(auto-fit, minmax(135px, 50%)) !important;
+      gap: px2rem(13) 0 !important;
+    }
+    @include respond-to("medium") {
+      grid-template-columns: repeat(auto-fit, minmax(140px, 45%));
+      grid-auto-rows: minmax(138px, 140px);
+      gap: px2rem(13) px2rem(23);
+    }
+    @media screen and(min-width:481px) and (max-width: 768px) {
+      grid-template-columns: repeat(auto-fit, minmax(140px, 45%));
+      grid-auto-rows: minmax(200px, 220px);
+      gap: px2rem(13) px2rem(23);
+    }
+
+    .load-more {
+      grid-column: auto/span 4;
+      margin-top: 0;
+    }
+  }
+  .profileTitle {
+    font-size: px2rem(36);
+    font-weight: $semibold-font-weight;
+    margin-top: px2rem(50);
+  }
+  .profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    transition: all 0.5s;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 8px;
+      height: 50px;
+      background: $green;
+    }
+    @include on-event($self: false) {
+      &::after {
+        opacity: 0;
+      }
+      .name,
+      .position,
+      .abbrv {
+        opacity: 0;
+      }
+      .profile-img {
+        opacity: 1;
+      }
+    }
+    .name {
+      font-size: px2rem(18);
+      @include respond-to("small") {
+        font-size: px2rem(10);
+      }
+    }
+    .position {
+      font-size: px2rem(14);
+      @include respond-to("small") {
+        font-size: px2rem(9);
+      }
+    }
+    .name,
+    .position {
+      font-weight: $semibold-font-weight;
+      text-align: center;
+    }
+    .profile-img {
+      position: relative;
+      opacity: 0;
+      transition: all 0.3s;
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+    .abbrv {
+      position: relative;
+      width: 100%;
+      font-size: px2rem(64);
+      font-weight: $semibold-font-weight;
+      margin-bottom: px2rem(30);
+      text-align: center;
+      @include respond-to("small") {
+        font-size: px2rem(24);
+        margin-bottom: px2rem(10);
+        padding: 0.5rem;
+      }
+      sup {
+        position: absolute;
+        top: 0;
+        margin-left: 0.5rem;
+        font-size: px2rem(18);
+        @include respond-to("small") {
+          font-size: px2rem(11);
+        }
+      }
+    }
+  }
+  .bulb-section {
+    position: relative;
+    height: max(200px, 412px);
+    text-align: center;
+    margin-top: px2rem(10);
+    @include respond-to("large") {
+      display: none;
+    }
+
+    img {
+      z-index: -1;
+      object-fit: cover;
+    }
+    p {
+      font-size: px2rem(36);
+      font-weight: $bold-font-weight;
+      line-height: px2rem(44);
+      color: $white;
+      padding: 8rem;
+    }
+  }
+}

@@ -1,0 +1,134 @@
+.code-of-conduct {
+  .imgUnderBanner {
+    padding-left: px2rem(50);
+    padding-right: px2rem(50);
+    @include respond-to("large") {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    @include respond-to("xlarge") {
+      margin: 150px auto 100px;
+    }
+    .content {
+      * {
+        color: $white;
+      }
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      img {
+        width: 100%;
+      }
+      span {
+        position: relative;
+        top: unset;
+        transform: none;
+        left: unset;
+        width: 100%;
+        text-align: center;
+        font-weight: $black-font-weight;
+        font-size: px2rem(64);
+        line-height: px2rem(78);
+        text-transform: uppercase;
+        color: #ffffff;
+        margin-bottom: 2rem;
+        @include respond-to("medium") {
+          font-size: px2rem(24);
+          line-height: px2rem(29);
+          width: 80%;
+        }
+      }
+      p {
+        font-weight: $semibold-font-weight;
+        font-size: px2rem(20);
+        line-height: px2rem(33);
+        text-align: center;
+        padding: 0 8rem;
+        margin: 0;
+        @include respond-to("medium") {
+          font-size: px2rem(10);
+          line-height: px2rem(15);
+          padding: 0;
+        }
+      }
+    }
+  }
+  .middleGrid-title {
+    font-weight: 600;
+    font-size: px2rem(30);
+    line-height: px2rem(37);
+    text-align: justify;
+    margin: px2rem(60) 0;
+    @include respond-to("medium") {
+      font-size: px2rem(24);
+      line-height: px2rem(30);
+    }
+  }
+  .middleGrid {
+    grid-auto-rows: auto !important;
+    &__item {
+      flex-direction: column;
+      justify-content: center;
+      padding-top:2rem;
+      padding-bottom:2rem;
+      p {
+        margin-bottom: px2rem(30);
+        margin-top: 0;
+        @include respond-to("medium") {
+          margin-bottom: px2rem(10);
+        }
+      }
+      ul {
+        padding-left: 1rem;
+        list-style-type: none;
+        margin: 0 px2rem(60);
+        @include respond-to("1300") {
+          margin: 0 px2rem(20);
+        }
+      }
+      li {
+        position: relative;
+        padding-left: 1rem;
+        margin: 1rem auto;
+        font-size: px2rem(20);
+        @include respond-to("1300") {
+          font-size: px2rem(16);
+        }
+        @include respond-to("medium") {
+          margin: 0.5rem auto;
+        }
+        &::before {
+          content: "\2802";
+          position: absolute;
+          top: 0;
+          left: 0;
+          display: inline-block;
+          margin: auto;
+        }
+      }
+    }
+  }
+  .overAccordionSection {
+    .title {
+      font-weight: $semibold-font-weight;
+      font-size: px2rem(36);
+      line-height: px2rem(44);
+      @include respond-to("medium") {
+        font-size: px2rem(24);
+        line-height: px2rem(29);
+      }
+    }
+    @media only screen and (min-width: 1025px) {
+      padding: 0 px2rem(50);
+    }
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

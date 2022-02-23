@@ -1,0 +1,99 @@
+.ndb-dep--materials {
+    padding-bottom: 0;
+    .materials-title-section {
+        padding: 150px 0px;
+        color: #e5e5e5;
+        .word {
+            position: relative;
+            display: inline-block;
+            transition: 1.5s;
+        }
+        .word-1 {
+            top: 0px;
+        }
+        .word-2 {
+            top: 30px;
+        }
+        .word-3 {
+            top: 60px;
+        }
+        .title-animation {
+            color: #343a40;
+            transition: 1s;
+            .word {
+                top: 0px !important;
+            }
+        }
+        .sub-title-animation {
+            color: #343a40;
+            transform: 1s;
+            .word {
+                top: 0px !important;
+            }
+        }
+    }
+
+    .ndb-dep__animation-wrapper {
+        .animation-wrapper {
+            svg {
+                width: 100%;
+                height: auto;
+            }
+
+            @media screen and (min-width: 1024px) {
+                // width: 555px;
+                position: sticky;
+                top: 24px;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                position: relative;
+
+                svg {
+                    position: absolute;
+                    display: block;
+                    transition: all 1s ease;
+
+                    $offset: 9%;
+
+                    &.animation--1 {
+                        top: 0;
+                        right: 0;
+                        left: 0;
+                        margin: auto;
+                        z-index: 91;
+                    }
+
+                    &.animation--2 {
+                        top: calc($offset * 2);
+                        margin-top: 0;
+                        z-index: 90;
+                    }
+
+                    &.animation--3 {
+                        top: calc($offset * 4);
+                        z-index: 89;
+                    }
+
+                    &.animation--4 {
+                        top: calc($offset * 6);
+                        right: 0;
+                        left: 0;
+                        margin: auto;
+                        z-index: 88;
+                    }
+                }
+            }
+        }
+
+        .animation__content {
+            @media screen and (min-width: 1024px) {
+                width: calc(100% - 600px);
+                margin: 0;
+            }
+            .sticky {
+                top: 24px !important;
+            }
+        }
+    }
+}

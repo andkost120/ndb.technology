@@ -1,0 +1,234 @@
+.sustainability {
+  &__banner {
+    .banner__left {
+      .banner__overlay {
+        height: 100%;
+      }
+      .banner__description {
+        margin-bottom: 70px;
+      }
+    }
+  }
+  .banner__buttonMobile {
+    margin-bottom: 3rem;
+  }
+  @media only screen and (min-width: 768) {
+    .c-button__link {
+      letter-spacing: normal;
+    }
+  }
+  @include respond-to("medium") {
+    .gridContent {
+      width: 90%;
+      .card-content {
+        width: 90%;
+      }
+    }
+  }
+
+  .ndbActions {
+    font-weight: $semibold-font-weight;
+    font-size: px2rem(36);
+    line-height: px2rem(44);
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    @include respond-to("medium") {
+      font-size: px2rem(24);
+      line-height: px2rem(29);
+    }
+  }
+  .middle-grid {
+    display: block;
+    margin-top: 1rem;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: px2rem(100);
+      width: 100%;
+      @include respond-to("medium") {
+        margin-bottom: px2rem(0);
+        width: 100%;
+      }
+      .topSection {
+        position: relative;
+
+        .content {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 90%;
+          margin: 0;
+          text-align: center;
+          color: $white;
+          font-weight: $semibold-font-weight;
+          font-size: px2rem(30);
+          line-height: px2rem(37);
+          @include respond-to("small") {
+            width: 100%;
+          }
+          @include respond-to("medium") {
+            font-size: px2rem(16);
+            line-height: px2rem(20);
+          }
+        }
+        img {
+          width: 100%;
+          @include respond-to("medium") {
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+      span {
+        width: 100%;
+        display: block;
+        margin-top: px2rem(50);
+        margin-bottom: px2rem(30);
+        @include respond-to("medium") {
+          font-size: px2rem(24);
+          font-weight: $semibold-font-weight;
+          line-height: px2rem(29);
+        }
+      }
+      p {
+        font-size: px2rem(20);
+        font-weight: $regular-font-weight;
+        line-height: px2rem(33);
+        margin-top: 1rem;
+        text-align: justify;
+        @include respond-to("medium") {
+          font-size: px2rem(16);
+          font-weight: $regular-font-weight;
+          line-height: px2rem(25);
+          margin: 0 px2rem(20);
+          text-align: justify;
+        }
+      }
+    }
+  }
+  .ndb-vision {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    &__card {
+      flex-basis: 49%;
+      height: 100%;
+      padding: 0;
+    }
+    .card-image {
+      position: relative !important;
+      width: 100%;
+    }
+    .card-content-custom {
+      position: absolute;
+      width: 50%;
+    }
+  }
+
+  .sustain-challenge {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: px2rem(85);
+    max-height: 250px;
+    @include respond-to("medium") {
+      flex-direction: column;
+      max-height: none;
+      padding: 0 20px;
+      img {
+        width: 100%;
+      }
+    }
+    p {
+      font-size: px2rem(20);
+      line-height: px2rem(36);
+      text-align: justify;
+      max-width: 50%;
+      @include respond-to("medium") {
+        max-width: 100%;
+      }
+    }
+  }
+  @include respond-to("medium") {
+    .mobile-show.banner__overlay {
+      height: 100%;
+    }
+
+    .custom-grid {
+      grid-template-columns: repeat(1, 1fr);
+      &__item .title {
+        width: 100%;
+      }
+      &__item {
+        .content,
+        .title {
+          width: 100%;
+          padding: 0 px2rem(20);
+        }
+        img {
+          object-fit: cover;
+        }
+      }
+    }
+    .accordion-section {
+      padding: 0 px2rem(20);
+    }
+    .vision {
+      margin-top: px2rem(81);
+    }
+    .vision-title {
+      font-size: px2rem(24);
+      padding: 0 px2rem(20);
+      text-align: left;
+    }
+    .vision-mobile {
+      .ndb-vision {
+        grid-template-rows: repeat(4, minmax(200px, 351px));
+        &__card {
+          padding: 4rem 0rem;
+        }
+        .card-image {
+          object-position: bottom;
+          object-fit: fill;
+        }
+      }
+    }
+    .technology__section1 {
+      margin-top: px2rem(41);
+      &-title {
+        text-align: left;
+      }
+      .c-button {
+        margin-top: 2rem;
+        a {
+          max-width: 100%;
+          align-items: flex-start;
+        }
+      }
+    }
+  }
+  @include respond-to("small") {
+    .ndb-vision {
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(4, minmax(200px, 250px));
+      gap: 0;
+      &__card {
+        padding: 4rem 0rem;
+      }
+    }
+  }
+  @media screen and (min-width: 481px) and (max-width: 768px) {
+    .ndb-vision {
+      gap: 0 !important;
+      .card-image {
+        object-position: bottom;
+      }
+    }
+  }
+}

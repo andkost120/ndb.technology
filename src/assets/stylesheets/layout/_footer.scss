@@ -1,0 +1,244 @@
+footer {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(200px, 250px));
+  // gap: 1rem 5rem;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: px2rem(50);
+  background: $gray;
+
+  @media only screen and (max-width: 827px) {
+    padding: px2rem(18) px2rem(10);
+    grid-template-columns: repeat(2, minmax(px2rem(100), px2rem(250)));
+    gap: 0rem 1rem;
+  }
+  .info-footer {
+    grid-column: auto/span 3;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    @include respond-to("medium") {
+      grid-column: auto/span 2;
+      order: 4;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+    }
+    .info {
+      display: flex;
+      font-size: px2rem(10);
+      font-weight: $regular-font-weight;
+
+      @include respond-to("medium") {
+        font-size: px2rem(7) !important;
+        max-width: 50%;
+      }
+
+      a {
+        margin: 0 1rem;
+        @include respond-to("small") {
+          // margin: 0 px2rem(2) !important;
+        }
+        @include respond-to("medium") {
+          margin: 0 px2rem(6);
+        }
+      }
+      a:first-child {
+        margin-left: 0;
+      }
+      a:last-child {
+        margin-right: 0;
+      }
+    }
+    .copyright {
+      font-size: px2rem(10);
+      font-weight: $regular-font-weight;
+      margin-top: 0px;
+      @include respond-to("medium") {
+        font-size: px2rem(6);
+        order: 2;
+        margin-left: auto;
+        padding-right: 4px;
+        margin-top: -10px;
+      }
+      @media only screen and (min-width: 512px) and (max-width: 768px) {
+        order: 0;
+        margin-left: 0;
+        padding-right: 2rem;
+      }
+    }
+
+    .social {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-left: 1.4%;
+      @media only screen and (min-width: 768px) and (max-width: 1024px) {
+        margin-left: 6%;
+      }
+      @media only screen and (min-width: 1025px) and (max-width: 1200px) {
+        margin-left: 7%;
+      }
+      @media only screen and (min-width: 1201px) and (max-width: 1300px) {
+        margin-left: 6%;
+      }
+      @media only screen and (min-width: 1440px) and (max-width: 1800px) {
+        margin-left: 5%;
+      }
+      @media only screen and (min-width: 1801px) and (max-width: 2020px) {
+        // margin-left: 4%;
+      }
+      @media only screen and (min-width: 2021px) {
+        margin-left: px2rem(70);
+      }
+      @include respond-to("medium") {
+        max-width: 50%;
+        margin-left: 0;
+      }
+
+      a {
+        font-size: 9px;
+        line-height: 11px;
+        text-transform: uppercase;
+        margin: 0 1rem;
+        &:nth-child(1) {
+          margin-left: 0;
+        }
+        &:nth-child(6) {
+          margin-right: 0;
+        }
+        @include respond-to("small") {
+          margin: 0 0.5rem;
+          img {
+            object-fit: contain;
+            width: 100% !important;
+          }
+        }
+        @include respond-to("large") {
+          margin: 0 0.5rem;
+          img {
+            object-fit: contain;
+            width: 70%;
+          }
+        }
+      }
+    }
+  }
+
+  .left-side,
+  .right-side,
+  .center-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .left-side {
+    a {
+      width: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include respond-to("medium") {
+        width: 60%;
+      }
+      img {
+        width: 65%;
+        display: inline-block;
+        @include respond-to("medium") {
+          width: 100%;
+        }
+      }
+      .logo-text {
+        width: 35%;
+        font-size: 10px;
+        line-height: 17px;
+        margin-top: 9px;
+        text-align: justify;
+        font-weight: 500;
+        display: inline-block;
+        @include respond-to("medium") {
+          display: none;
+        }
+      }
+    }
+    .address {
+      display: flex;
+      flex-direction: column;
+      font-size: px2rem(16);
+      font-weight: $regular-font-weight;
+      margin: px2rem(30) 0 1rem;
+      @include respond-to("medium") {
+        font-size: px2rem(8);
+        margin-top: 1rem;
+      }
+    }
+  }
+
+  .center-side {
+    @include respond-to("medium") {
+      order: 3;
+      font-size: px2rem(10);
+    }
+    .contact {
+      width: 100%;
+      .email,
+      .phone {
+        display: flex;
+        justify-content: space-between;
+        margin-top: px2rem(5);
+      }
+      .phone a,
+      .email a {
+        margin-top: 0;
+      }
+      .phone span,
+      .email span {
+        font-weight: $medium-font-weight;
+      }
+    }
+
+    .banner__button {
+      margin-top: 2rem;
+      margin-bottom: 0;
+      span {
+        font-size: px2rem(20);
+        font-weight: $regular-font-weight;
+      }
+
+      @include respond-to("medium") {
+        margin-top: 1rem;
+        font-size: px2rem(10);
+      }
+    }
+  }
+
+  .right-side {
+    font-size: px2rem(20);
+    font-weight: $light-font-weight;
+    .footer-menu {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+    a {
+      font-size: px2rem(14);
+      line-height: px2rem(17);
+      margin: px2rem(5) 0;
+      @include on-event {
+        font-weight: $regular-font-weight;
+      }
+      @include respond-to("medium") {
+        font-size: px2rem(12);
+        line-height: px2rem(14);
+      }
+    }
+  }
+  .footer-menu2 {
+    display: flex;
+    justify-content: space-between;
+    font-size: px2rem(10);
+  }
+}
+
+.dark-footer {
+  background: #1e1e1e;
+}

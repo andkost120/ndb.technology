@@ -1,0 +1,47 @@
+.custom-grid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0;
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 50%;
+    height: 100%;
+    color: $white;
+    position: relative;
+    img {
+      z-index: -1;
+      position: relative !important;
+      width: 100%;
+    }
+    .content {
+      position: absolute;
+    }
+    .itemcontent {
+      font-size: px2rem(20);
+      align-items: center;
+      color: $white;
+      line-height: 33px;
+    }
+
+    .content {
+      width: 60%;
+    }
+    .title {
+      font-size: px2rem(24);
+      font-weight: $semibold-font-weight;
+      line-height: px2rem(30);
+      margin: 10px auto;
+    }
+  }
+  &__title {
+    font-size: px2rem(36);
+    font-weight: $semibold-font-weight;
+    line-height: px2rem(44);
+    margin: 100px auto;
+    text-align: center;
+  }
+}

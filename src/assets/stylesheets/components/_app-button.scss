@@ -1,0 +1,33 @@
+$size: 10rem;
+
+.ndb-btn {
+  display: flex;
+  flex-direction: column;
+  width: 10rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+
+  .arrow {
+    width: 100%;
+  }
+
+  &:hover .arrow {
+    transform: translateX(10px);
+  }
+
+  &:hover:disabled .arrow {
+    transform: none;
+  }
+
+  .name {
+    font-size: 1.875rem;
+    font-weight: 300;
+  }
+
+}
+
+.disabled {
+  cursor: default;
+  transform: none !important;
+}

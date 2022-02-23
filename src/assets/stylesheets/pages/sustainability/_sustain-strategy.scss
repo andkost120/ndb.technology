@@ -1,0 +1,92 @@
+.sustain-strategy {
+  @include respond-to("medium") {
+    .slider .interns__item .right {
+      padding-right: 0;
+    }
+    .slider .interns__item .left {
+      margin-right: 0;
+    }
+    .slider .interns__item .right::after {
+      width: 0;
+    }
+  }
+
+  .swiper-slide img {
+    width: auto;
+  }
+  .section-bold {
+    font-size: px2rem(30);
+    font-weight: $bold-font-weight;
+    line-height: px2rem(37);
+    @include respond-to("medium") {
+      font-size: px2rem(16);
+      font-weight: $semibold-font-weight;
+      line-height: px2rem(33);
+    }
+  }
+  .ndb-vision {
+    &__card {
+      padding: 0;
+      .gridContent {
+        @include respond-to("medium") {
+          width: 100%;
+        }
+        .card-content p {
+          font-size: px2rem(24);
+          font-weight: $bold-font-weight;
+          line-height: px2rem(29);
+          text-align: center;
+          font-variant: small-caps;
+          margin: 0;
+          @include respond-to("small") {
+            font-size: px2rem(18);
+            font-weight: $semibold-font-weight;
+            line-height: px2rem(22);
+          }
+        }
+      }
+    }
+  }
+  .gridCards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem 0;
+    padding: 0 px2rem(50);
+    margin-top: px2rem(138);
+    @include respond-to("small") {
+      padding: 0;
+      flex-direction: column;
+      flex-wrap: nowrap !important;
+      gap: 0 !important;
+    }
+    @include respond-to("medium") {
+      padding: 0 px2rem(20);
+      flex-direction: column;
+      flex-wrap: nowrap !important;
+      gap: 0.5rem !important;
+    }
+    .item {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      flex-basis: 49%;
+      height: 100%;
+      align-items: center;
+      @include respond-to("medium") {
+        p {
+          padding: 0;
+        }
+        flex-basis: 50% !important;
+        padding: 0 !important;
+      }
+    }
+  }
+}
+
+
+.mx-200{
+  margin-right: 200px;
+  margin-left: 200px;
+}

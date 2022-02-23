@@ -1,0 +1,52 @@
+$text-font-stack: "Montserrat", sans-serif !default;
+$code-font-stack: "Courier New", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Monaco", monospace !default;
+
+$text-color: rgb(0, 0, 0) !default;
+
+$gray: #f8f8f8 !default;
+$white: #ffffff !default;
+$gray-darken: #959595 !default;
+$gray-faded: rgba(248, 248, 248, 0.9) !default;
+$input-gray: rgba(7, 55, 98, 0.23) !default;
+$black-faded: rgba(0, 0, 0, 0.7);
+$black: rgba(0, 0, 0, 1);
+$white-faded: rgba(255, 255, 255, 0.8);
+$white-faded2: rgba(255, 255, 255, 0.07);
+$red: #d63838 !default;
+$green: #23c865 !default;
+
+$base-font-size: 16px !default;
+
+$light-font-weight: 300;
+$regular-font-weight: 400;
+$medium-font-weight: 500;
+$semibold-font-weight: 600;
+$bold-font-weight: 700;
+$black-font-weight: 800;
+
+$max-width-container: 794px !default;
+
+$max-width: 1300px !default;
+
+$breakpoints: (
+  "small": (
+    max-width: 480px,
+  ),
+  "medium": (
+    max-width: 768px,
+  ),
+  "large": (
+    max-width: 1024px,
+  ),
+  "huge": (
+    max-width: 1440px,
+  ),
+  "1300": (
+    max-width: 1300px,
+  ),
+  "xlarge": (
+    min-width: 1440px,
+  ),
+) !default;
+
+$trasform-duration: 0.3s;

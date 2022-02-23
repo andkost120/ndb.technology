@@ -1,0 +1,69 @@
+.block-tabs {
+  display: flex;
+  justify-content: space-between;
+}
+.tab-names {
+  display: flex;
+}
+.tabs-with-carousel {
+  font-size: px2rem(24);
+  font-weight: $semibold-font-weight;
+  padding: 15px;
+  text-align: center;
+  width: 50%;
+  background: none;
+  cursor: pointer;
+  border-bottom: none;
+  box-sizing: content-box;
+  position: relative;
+  outline: none;
+  color: $black-faded;
+  &__content {
+    background: white;
+    padding: 20px 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+  }
+}
+
+
+.active-tabs {
+  color: $text-color;
+}
+
+button {
+  border: none;
+}
+.content-tabs {
+  flex-grow: 1;
+}
+.active-content {
+  display: block;
+}
+.arrow-move__Left {
+  transform: translateX(20px) rotate(90deg);
+  &:hover img {
+    transform: translateY(10px);
+  }
+}
+.arrow-move__Right {
+  transform: translateX(-20px) rotate(-90deg);
+  &:hover img {
+    transform: translateY(10px);
+  }
+}
+.arrow-move__Right,
+.arrow-move__Left {
+  border: none;
+  cursor: pointer;
+  background: none;
+
+  @include respond-to("medium") {
+    display: none;
+  }
+}
+.arrow-move__Left img,
+.arrow-move__Right img {
+  transition: all 0.3s;
+}

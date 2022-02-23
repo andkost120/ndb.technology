@@ -1,0 +1,308 @@
+.internships {
+  @include respond-to("medium") {
+    .global-title-font {
+      font-size: px2rem(25) !important;
+    }
+  }
+
+  .banner__overlay {
+    bottom: 0 !important;
+    top: auto;
+
+    @include respond-to("medium") {
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  .banner__description {
+    margin-bottom: px2rem(70);
+    max-width: 100%;
+    @include respond-to("medium") {
+      font-size: px2rem(20);
+      margin-bottom: px2rem(30);
+      margin-top: px2rem(100);
+    }
+
+    @media only screen and (min-width: 1301px) and(max-width:1870px) {
+      max-width: 70%;
+    }
+    @media only screen and (min-width: 1870px) {
+      max-width: 60%;
+    }
+  }
+  .banner__data {
+    margin-bottom: px2rem(100);
+  }
+  .internships-programs {
+    margin-top: px2rem(77);
+    @include respond-to("small") {
+      margin: auto 20px;
+    }
+    @include respond-to("medium") {
+      margin-top: px2rem(50);
+    }
+    .title {
+      font-weight: $semibold-font-weight;
+      font-size: px2rem(36);
+      line-height: px2rem(44);
+      text-align: center;
+    }
+    .program-content {
+      font-size: px2rem(20);
+      line-height: px2rem(33);
+      text-align: center;
+      margin: px2rem(30) 0 px2rem(50);
+      @include respond-to("small") {
+        text-align: left;
+      }
+    }
+  }
+  .cards {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: px2rem(39);
+    @include respond-to("medium") {
+      padding: 0;
+      .card {
+        margin: 5px 0;
+      }
+    }
+    @include respond-to("xlarge") {
+      padding: 0 px2rem(83);
+    }
+    .card {
+      background-color: $gray;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      flex-basis: 30%;
+      padding: 2rem;
+      @include respond-to("medium") {
+        padding: 0;
+      }
+      @include respond-to("small") {
+        width: 20%;
+      }
+      @include respond-to("xlarge") {
+        flex-basis: 30%;
+        padding: 5%;
+      }
+
+      img {
+        height: auto;
+        width: fit-content;
+      }
+      .content {
+        max-width: 60%;
+        font-weight: 600;
+        font-size: px2rem(30);
+        line-height: px2rem(37);
+        text-align: center;
+        letter-spacing: -0.02em;
+        margin-top: 1rem;
+
+        @include respond-to("small") {
+          font-weight: 600;
+          font-size: px2rem(12) !important;
+          line-height: px2rem(12) !important;
+          text-align: center;
+          letter-spacing: -0.02em;
+          width: 100%;
+        }
+        @include respond-to("1300") {
+          font-size: px2rem(20);
+          line-height: px2rem(29);
+        }
+        @media only screen and(max-width:800px) {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .seasonal-programs .program .c-button,
+  .departmental-internships .program .c-button,
+  .scholarship .c-button {
+    width: auto;
+    @include respond-to("small") {
+      &__name {
+        font-size: px2rem(14) !important;
+      }
+    }
+  }
+  .seasonal-programs {
+    .titleHead {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 1rem;
+      .title {
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 44px;
+        text-align: center;
+      }
+      .description {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 33px;
+        text-align: center;
+      }
+    }
+    .programsGrid {
+      display: -ms-grid;
+      display: grid;
+      -ms-grid-columns: (minmax(300px, 1fr));
+      grid-template-columns: repeat(3, minmax(300px, 1fr));
+      grid-auto-rows: minmax(300px, 385px);
+      gap: px2rem(20);
+      background-color: $gray;
+      padding: px2rem(50);
+      @media only screen and (min-width: 1024px) and (max-width: 1300px) {
+        gap: px2rem(20);
+      }
+      @include respond-to("1300") {
+        grid-template-columns: repeat(2, minmax(300px, 1fr));
+        grid-auto-rows: minmax(300px, 330px);
+        gap: px2rem(5);
+        padding: px2rem(20) 0;
+      }
+      @include respond-to("medium") {
+        grid-template-columns: repeat(1, minmax(200px, 1fr));
+        grid-auto-rows: minmax(200px, 300px);
+        gap: px2rem(5);
+        padding: px2rem(20) 0;
+      }
+    }
+    .program {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: $black;
+      color: $white;
+      padding: 50px 0;
+
+      .title {
+        font-size: px2rem(24);
+        line-height: px2rem(29);
+        font-weight: $semibold-font-weight;
+        text-align: center;
+        max-width: 85%;
+        margin: px2rem(46) 0;
+        @include respond-to("1300") {
+          font-size: px2rem(20);
+          margin: px2rem(25) 0;
+        }
+      }
+      .c-button {
+        &__img {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .departmental-internships {
+    margin-bottom: px2rem(20);
+    .c-button {
+      margin-left: auto;
+    }
+    .programsGrid {
+      grid-auto-rows: minmax(300px, 350px);
+      @include respond-to("small") {
+        grid-auto-rows: minmax(250px, 280px);
+      }
+      background-color: $white;
+      @include respond-to("xlarge") {
+        gap: px2rem(40);
+      }
+
+      .program {
+        align-items: flex-start;
+        justify-content: space-between;
+        color: $black;
+        background-color: $gray;
+        padding: 50px;
+        @include respond-to("small") {
+          padding: 30px;
+        }
+        .title {
+          margin: 0;
+        }
+        .content {
+          ul {
+            list-style-type: none;
+            font-size: px2rem(20);
+            line-height: px2rem(33);
+            font-weight: $regular-font-weight;
+          }
+        }
+      }
+    }
+  }
+
+  .scholarship {
+    position: relative;
+    width: 100%;
+    margin: px2rem(40) 0 px2rem(90);
+    @include respond-to("medium") {
+      margin: px2rem(40) 0;
+      height: max(200px, 420px);
+    }
+    .castleImage {
+      width: inherit;
+      height: 100%;
+      object-fit: cover;
+    }
+    img {
+      width: inherit;
+    }
+    &__content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      color: $white;
+      .title {
+        @media only screen and (min-width: 768px) and (max-width: 1024px) {
+          font-size: px2rem(25);
+          line-height: px2rem(30);
+        }
+        @include respond-to("medium") {
+          font-size: px2rem(21);
+          line-height: px2rem(20);
+        }
+      }
+      .content {
+        font-size: px2rem(20);
+        line-height: px2rem(33);
+        text-align: center;
+        margin: px2rem(80) 0 px2rem(35);
+        @include respond-to("large") {
+          margin: px2rem(30) 0;
+        }
+        @include respond-to("medium") {
+          margin: px2rem(50) 0;
+          font-size: px2rem(14);
+          line-height: px2rem(20);
+          padding: 0 1rem;
+        }
+      }
+
+      .banner__data {
+        margin: auto;
+        width: 40%;
+        @include respond-to("medium") {
+          width: 50%;
+        }
+        .c-button__link {
+          color: $white;
+        }
+        .c-button__name {
+          font-size: px2rem(20);
+          line-height: px2rem(24);
+        }
+      }
+    }
+  }
+}

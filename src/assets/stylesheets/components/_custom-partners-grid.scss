@@ -1,0 +1,87 @@
+.partners-section {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(280px, 1fr));
+  grid-auto-rows: minmax(130px, 150px);
+  gap: px2rem(20);
+  justify-items: center;
+  text-align: center;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  background: $gray;
+  &__item {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $white;
+    transition: all 0.3s;
+    padding: 3rem;
+    -webkit-padding: 0;
+
+    img {
+      position: relative;
+      object-fit: scale-down;
+      width: 100%;
+      height: 100%;
+      transition: all 0.3s;
+      filter: saturate(0%) brightness(1);
+      -webkit-filter: saturate(0%) contrast(3) brightness(1);
+      -moz-filter: saturate(0%) contrast(3) brightness(1);
+      -o-filter: saturate(0%) contrast(3) brightness(1);
+    }
+    &:hover > img {
+      filter: saturate(100%) brightness(1);
+      -webkit-filter: saturate(100%) contrast(none) brightness(1);
+      -moz-filter: saturate(100%) contrast(none) brightness(1);
+      -o-filter: saturate(100%) contrast(none) brightness(1);
+    }
+  }
+}
+
+.partners-section-mobile {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(280px, 1fr));
+  grid-auto-rows: minmax(100px, 120px);
+  gap: 1.25rem;
+  justify-items: center;
+  text-align: center;
+  padding-top: 0;
+  padding-bottom: 0;
+  background: #f8f8f8;
+  margin-top: 2rem;
+
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $white;
+
+    a {
+      width: 100%;
+      height: 100%;
+
+      img {
+        position: relative;
+        object-fit: none;
+        width: inherit !important;
+        height: inherit !important;
+        transition: all 0.3s;
+        filter: saturate(0%) brightness(1);
+        -webkit-filter: saturate(0%) contrast(3) brightness(1);
+        -moz-filter: saturate(0%) contrast(3) brightness(1);
+        -o-filter: saturate(0%) contrast(3) brightness(1);
+        object-fit: scale-down !important;
+        padding: 1rem;
+      }
+      &:hover > img {
+        filter: saturate(100%) brightness(1);
+        -webkit-filter: saturate(100%) contrast(none) brightness(1);
+        -moz-filter: saturate(100%) contrast(none) brightness(1);
+        -o-filter: saturate(100%) contrast(none) brightness(1);
+      }
+    }
+  }
+}

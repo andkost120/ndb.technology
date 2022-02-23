@@ -1,0 +1,187 @@
+.responsible-sourcing {
+  .imgUnderBanner {
+    padding-left: px2rem(50);
+    padding-right: px2rem(50);
+    @include respond-to("medium") {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    @include respond-to("xlarge") {
+      margin: 150px auto 100px;
+    }
+    .content {
+      * {
+        color: $white;
+      }
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      img {
+        width: 100%;
+      }
+      span {
+        position: relative;
+        top: unset;
+        transform: none;
+        left: unset;
+        width: 100%;
+        text-align: center;
+        font-weight: $black-font-weight;
+        font-size: px2rem(64);
+        line-height: px2rem(78);
+        text-transform: uppercase;
+        color: #ffffff;
+        margin-bottom: 2rem;
+        @include respond-to("medium") {
+          font-size: px2rem(24);
+          line-height: px2rem(29);
+          width: 80%;
+        }
+      }
+      p {
+        font-weight: $semibold-font-weight;
+        font-size: px2rem(20);
+        line-height: px2rem(33);
+        text-align: center;
+        padding: 0 8rem;
+        margin: 0;
+        @include respond-to("medium") {
+          font-size: px2rem(10);
+          line-height: px2rem(15);
+          padding: 0;
+        }
+      }
+    }
+  }
+  p {
+    margin-bottom: 50px;
+  }
+  .infoSection {
+    width: 100%;
+    @include respond-to("large") {
+      padding: 0 px2rem(20) !important;
+      p {
+        padding: 0;
+      }
+    }
+    p {
+      @include respond-to("medium") {
+        margin: 0 0 px2rem(59);
+      }
+    }
+  }
+  .gridSection {
+    section {
+      @include respond-to("xlarge") {
+        flex-direction: column;
+        height: clamp(300px, 777px, 800px) !important;
+      }
+      .imageSection {
+        height: 100%;
+        padding: 0 !important;
+
+        @include respond-to("xlarge") {
+          width: 100%;
+          margin-bottom: px2rem(130);
+        }
+        @include respond-to("large") {
+          height: auto !important;
+        }
+
+        img {
+          width: auto;
+          margin: auto;
+          object-fit: contain !important;
+        }
+      }
+      .infoSection {
+        padding: 0 px2rem(50) 0 0 !important;
+        @include respond-to("large") {
+          padding: 0 px2rem(20) 0 px2rem(20) !important;
+        }
+        @include respond-to("xlarge") {
+          order: 2;
+          width: 100%;
+        }
+      }
+    }
+  }
+  .middleGrid {
+    grid-template-columns: repeat(1, minmax(20%, 1fr));
+    @include respond-to("xlarge") {
+      margin-bottom: px2rem(153);
+    }
+    @include respond-to("medium") {
+      grid-auto-rows: auto !important;
+    }
+    &__item {
+      display: flex;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      @include respond-to("medium") {
+        flex-direction: column;
+        padding: 20px 0;
+      }
+    }
+    &__content {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex: 0.5;
+      height: 100%;
+      @include respond-to("large") {
+        flex: 0.6;
+      }
+      @include respond-to("medium") {
+        order: 2;
+      }
+      p {
+        margin: px2rem(20) px2rem(45);
+        font-size: px2rem(20);
+        line-height: px2rem(33) !important;
+        text-align: justify;
+        @include respond-to("1300") {
+          margin: auto 20px;
+          font-size: px2rem(16);
+          line-height: px2rem(25);
+        }
+      }
+    }
+    &__image {
+      flex: 0.5;
+      height: 100%;
+      @include respond-to("large") {
+        flex: 0.4;
+      }
+      img {
+        margin: auto;
+        width: 100%;
+        object-fit: contain;
+        height: inherit;
+      }
+    }
+  }
+  .overAccordionSection {
+    .title {
+      font-weight: $semibold-font-weight;
+      font-size: px2rem(36);
+      line-height: px2rem(44);
+      @include respond-to("medium") {
+        font-size: px2rem(24);
+        line-height: px2rem(29);
+      }
+    }
+    @media only screen and (min-width: 1025px) {
+      padding: 0 px2rem(50);
+    }
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

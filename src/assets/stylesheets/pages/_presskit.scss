@@ -1,0 +1,433 @@
+.presskit {
+  .c-button {
+    width: 45%;
+  }
+
+  .banner__overlay {
+    height: 100%;
+  }
+
+  .press-room {
+    padding-right: px2rem(50);
+    padding-left: px2rem(50);
+  }
+
+  .about {
+    text-align: center;
+
+    padding-bottom: px2rem(95);
+    padding-top: px2rem(95);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background: $gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .body {
+      font-size: 26px;
+      font-weight: 400;
+      line-height: 33px;
+      font-style: normal;
+      padding-top: 2rem;
+      width: 50%;
+    }
+  }
+
+  .year {
+    display: flex;
+    justify-content: center;
+    padding: 3rem 1rem 0 1rem;
+    text-align: center;
+
+    .card {
+      background: $gray;
+      padding: 3rem;
+      margin: 0.5rem;
+      width: 30%;
+
+      .num {
+        font-weight: 700;
+        font-size: 5rem;
+        font-style: normal;
+        line-height: 175.54px;
+      }
+      .text {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 33px;
+        font-style: normal;
+      }
+    }
+  }
+
+  .team {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    max-width: 100rem;
+
+    .card {
+      background: $gray;
+      padding: 2rem;
+      margin: 0.5rem;
+      width: 30%;
+      @include respond-to("small") {
+        width: 100%;
+        padding: 0.5rem;
+      }
+      @media only screen and (min-width: 480px) and (max-width: 768px) {
+        width: 45%;
+        padding: 0;
+      }
+
+      .name {
+        font-weight: 700;
+        font-size: 23px;
+        line-height: 28.04px;
+        font-style: normal;
+        margin-top: 0.5rem;
+      }
+      .position {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 33px;
+        font-style: normal;
+      }
+    }
+  }
+
+  .whatWeDo {
+    display: flex;
+    justify-content: space-between;
+    padding-right: px2rem(50);
+    padding-left: px2rem(50);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    @include respond-to("medium") {
+      flex-direction: column;
+    }
+    .header {
+      margin-bottom: 1rem;
+      margin-top: 0;
+    }
+    .item {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+
+      .btn {
+        display: flex;
+        flex-direction: column;
+        .arrow {
+          margin-top: 3rem;
+          margin-bottom: -0.5rem;
+        }
+      }
+      .content {
+        margin-bottom: auto;
+      }
+    }
+  }
+
+  .press-releases {
+    .header {
+      text-align: center;
+    }
+    .press-cont {
+      background: $gray;
+      padding: 2rem;
+      .description {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: px2rem(9) 0;
+        text-align: left;
+        text-decoration: underline;
+        font-weight: 600;
+        .image {
+          flex: 0.3;
+          padding: 2rem;
+          background: $white;
+          width: 17rem;
+          height: 8rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 1rem;
+          @include respond-to("small") {
+            margin-left: 0;
+          }
+        }
+        span {
+          flex: 0.7;
+        }
+      }
+    }
+  }
+
+  .downloads {
+    margin-top: 5rem;
+    .header {
+      text-align: center;
+      margin: 2rem 1rem;
+    }
+
+    .downloads-cont {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding-right: px2rem(50);
+      padding-left: px2rem(50);
+
+      .item1 {
+        width: 50%;
+        margin: 1rem 0;
+        &:nth-child(even) {
+          padding-left: px2rem(19);
+        }
+        &:nth-child(odd) {
+          padding-right: px2rem(19);
+        }
+        @include respond-to("medium") {
+          width: 100%;
+          padding-left: 0 !important;
+          padding-right: 0 !important;
+          .item {
+            padding: 0 px2rem(10);
+          }
+        }
+
+        .item {
+          width: 100%;
+          height: 12rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          background: $gray;
+          margin: 1rem 0;
+
+          .title {
+            text-align: center;
+          }
+
+          .image {
+            width: 3rem;
+            height: 3rem;
+            margin-top: 0.5rem;
+          }
+        }
+
+        .btn {
+          display: flex;
+          flex-direction: column;
+          .arrow {
+            margin-top: 1rem;
+            margin-bottom: -0.5rem;
+          }
+        }
+
+        .green {
+          background: #23c865;
+        }
+
+        .gray {
+          background: $gray;
+        }
+
+        .dark-gray {
+          background: #e6e7e8;
+        }
+      }
+    }
+  }
+
+  .contact {
+    margin-top: 5rem;
+    .header {
+      text-align: center;
+    }
+
+    .contact-cont {
+      padding-right: px2rem(50);
+      padding-left: px2rem(50);
+      display: flex;
+      justify-content: space-between;
+
+      .addresses {
+        .address {
+          margin-bottom: 2rem;
+          .head {
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+          }
+          .sub-header {
+            font-weight: 600;
+            font-size: 1rem;
+            font-style: normal;
+            line-height: 2rem;
+          }
+        }
+      }
+      .image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 55rem;
+      }
+    }
+  }
+
+  .for-more {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+
+    .header {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    .btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  @include respond-to("small") {
+    .about {
+      .body {
+        width: 100%;
+      }
+    }
+
+    .whatWeDo {
+      flex-direction: column;
+      padding-right: 20px;
+      padding-left: 20px;
+      .item {
+        width: 100%;
+      }
+    }
+
+    .press-releases {
+      .press-cont {
+        .description {
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          width: 100%;
+          margin-bottom: px2rem(20);
+        }
+      }
+    }
+
+    .downloads {
+      .downloads-cont {
+        flex-direction: column;
+        padding-left: 20px;
+        padding-right: 20px;
+        .item1 {
+          width: 100%;
+        }
+      }
+    }
+
+    .contact {
+      .contact-cont {
+        flex-direction: column;
+        padding-left: 20px;
+        padding-right: 20px;
+        .image {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  @include respond-to("medium") {
+    .banner__overlay {
+      left: 10%;
+      top: -10%;
+    }
+    .press-room {
+      padding-left: px2rem(20);
+      padding-right: px2rem(20);
+      font-size: px2rem(25) !important;
+    }
+    .team {
+      padding: px2rem(0) px2rem(20);
+    }
+    .year {
+      flex-direction: column;
+      .card {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        width: auto;
+        .num {
+          font-size: px2rem(60);
+        }
+      }
+    }
+    .whatWeDo {
+      .item {
+        width: 100%;
+        &:nth-child(1) {
+          order: 2;
+        }
+        &:nth-child(2) {
+          order: 1;
+        }
+        &:nth-child(3) {
+          order: 3;
+        }
+        &:nth-child(4) {
+          order: 4;
+        }
+        .c-button {
+          margin-top: 2rem;
+        }
+      }
+    }
+    .about {
+      padding-bottom: px2rem(60);
+      padding-top: px2rem(60);
+      .body {
+        width: 100%;
+        font-size: px2rem(16);
+      }
+    }
+    .press-releases {
+      .press-cont {
+        .press {
+          margin: px2rem(9) 0;
+        }
+      }
+    }
+    .contact {
+      .address {
+        .header-3 {
+          font-size: px2rem(26);
+          line-height: px2rem(30);
+        }
+      }
+    }
+  }
+
+  .header-3 {
+    font-weight: 600;
+    font-style: normal;
+    font-size: 36px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    line-height: 43.88px;
+  }
+}

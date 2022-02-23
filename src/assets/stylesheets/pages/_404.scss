@@ -1,0 +1,141 @@
+.notFound {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+  &__banner {
+    height: auto;
+  }
+  .contentWrapper {
+    position: relative;
+    max-width: px2rem(1440);
+    padding: 0 px2rem(130);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 6rem;
+
+    @include respond-to("medium") {
+      margin-top: 0;
+      transform: translateY(40%);
+      padding: px2rem(20) !important;
+    }
+    @media only screen and (min-width: 769px) and (max-width: 1024px) {
+      padding: 0 px2rem(50) !important;
+    }
+    @include respond-to("large") {
+      padding: 0 px2rem(100);
+    }
+
+    .background-image {
+      position: absolute;
+      width: auto;
+      top: 20%;
+      right: 0;
+      object-fit: none;
+      z-index: -1;
+      @include respond-to("small") {
+        width: 100%;
+        top: -40% !important;
+        right: -40% !important;
+        transform: translateX(-40%) !important;
+      }
+      @include respond-to("medium") {
+        object-fit: contain;
+        top: 100%;
+        right: 0;
+      }
+    }
+
+    .text404 {
+      font-size: px2rem(183);
+      font-weight: $bold-font-weight;
+      line-height: 81px;
+      color: white;
+      text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
+      @include respond-to("small") {
+        font-size: px2rem(124);
+      }
+      @include respond-to("medium") {
+        font-size: px2rem(140);
+        text-align: center;
+      }
+      @media only screen and (min-width: 769px) and (max-width: 1024px) {
+        font-size: px2rem(160);
+      }
+    }
+    .text404,
+    .link404 {
+      padding-left: 3rem;
+      margin-bottom: 7rem;
+      @include respond-to("medium") {
+        padding-left: 0 !important;
+        margin-bottom: 2rem;
+      }
+    }
+
+    .link404 {
+      display: flex;
+      flex-direction: column;
+
+      p {
+        width: 100%;
+        font-size: px2rem(83);
+        font-weight: $bold-font-weight;
+        line-height: px2rem(50);
+        @media only screen and (min-width: 769px) and (max-width: 1024px) {
+          font-size: px2rem(50);
+        }
+        @include respond-to("medium") {
+          font-size: px2rem(45);
+          text-align: center;
+        }
+      }
+      .content {
+        display: flex;
+        justify-self: center;
+        align-items: center;
+        font-size: px2rem(30);
+        font-weight: $bold-font-weight;
+        margin-top: px2rem(40);
+        @include respond-to("medium") {
+          flex-direction: column;
+        }
+
+        p {
+          width: 60%;
+          font-size: px2rem(30);
+          line-height: px2rem(37);
+          font-weight: $bold-font-weight;
+          padding-right: 1rem;
+          @include respond-to("medium") {
+            font-size: px2rem(20);
+            padding-bottom: 2rem;
+            width: 100%;
+          }
+          @media only screen and (min-width: 769px) and (max-width: 1024px) {
+            font-size: px2rem(24);
+          }
+        }
+        a {
+          position: relative;
+          width: auto;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          img {
+            width: 100%;
+            object-fit: contain;
+            transition: transform 0.3s;
+            @include respond-to("medium") {
+              width: 80%;
+            }
+          }
+          &:hover img {
+            transform: translateX(20px);
+          }
+        }
+      }
+    }
+  }
+}

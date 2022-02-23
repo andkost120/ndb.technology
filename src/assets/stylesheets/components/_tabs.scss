@@ -1,0 +1,119 @@
+.tabs {
+    margin: 0 auto;
+    z-index: 3;
+
+    .page-name {
+        font-size: px2rem(36);
+        font-weight: $semibold-font-weight;
+        margin-bottom: px2rem(45);
+        margin-top: px2rem(60);
+        text-align: center;
+    }
+    .tabs-wrapper {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        color: $white;
+        height: auto;
+    }
+
+    .tabs-overlay {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
+
+    .tab-buttons {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        margin-bottom: px2rem(50);
+        margin-left: px2rem(50);
+        margin-top: px2rem(50);
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-box-flex: 0.3;
+        -webkit-flex: 0.3;
+        -ms-flex: 0.3;
+        flex: 0.3;
+        button {
+            color: $white;
+        }
+    }
+
+    .tab-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        flex: 0.7;
+        border-left: 2px solid;
+        padding: 0 50px;
+        margin: 50px 0;
+
+        .content-intro {
+            margin-bottom: px2rem(25);
+        }
+        .content-bio,
+        .content-desc {
+            font-size: px2rem(20);
+            line-height: px2rem(33);
+            font-weight: $regular-font-weight;
+        }
+        .content-bio {
+            font-weight: $medium-font-weight;
+        }
+        .content-desc {
+            font-weight: $regular-font-weight;
+            line-height: px2rem(33);
+            margin-bottom: auto;
+        }
+        .content-button {
+            position: relative;
+            a {
+                max-width: 30%;
+                margin: 0;
+            }
+            img {
+                width: fit-content;
+                position: absolute;
+                height: auto;
+                top: 100%;
+            }
+        }
+    }
+    .content-title,
+    .buttons-title {
+        font-size: px2rem(24);
+        font-weight: $semibold-font-weight;
+    }
+    button {
+        font-size: px2rem(20);
+        font-weight: $light-font-weight;
+        background: transparent;
+        border: none;
+        text-align: left;
+        outline: none;
+        padding: px2rem(10) 0;
+        cursor: pointer;
+        color: $text-color;
+        transition: all ease-in-out 0.2s;
+        border-bottom: 2px solid transparent;
+        width: max-content;
+    }
+
+    .active {
+        font-weight: 600;
+    }
+}

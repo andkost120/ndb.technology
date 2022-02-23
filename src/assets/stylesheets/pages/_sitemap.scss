@@ -1,0 +1,45 @@
+.sections {
+  position: relative;
+  padding: 0 50px;
+  section {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5rem;
+  }
+  &__title {
+    width: 100%;
+    border-bottom: 1px solid $black-faded;
+    font-size: px2rem(40);
+    font-weight: $semibold-font-weight;
+    text-transform: uppercase;
+    margin-bottom: px2rem(26);
+    padding-bottom: px2rem(16);
+  }
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: px2rem(0);
+    @include respond-to("medium") {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 2rem;
+    }
+
+    ul {
+      list-style-type: none;
+      li:first-child {
+        font-size: px2rem(36);
+        font-weight: $semibold-font-weight;
+      }
+      li {
+        margin: px2rem(8) 0;
+        font-size: px2rem(24);
+        line-height: px2rem(29);
+      }
+      .bold-title {
+        font-size: px2rem(34);
+        letter-spacing: -1px;
+        font-weight: $semibold-font-weight;
+      }
+    }
+  }
+}
